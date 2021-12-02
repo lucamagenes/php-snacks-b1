@@ -54,15 +54,14 @@ Olimpia Milano - Cantù | 55-60
 
         <?php for ($i=0; $i < count($partite); $i++) {
         $element = $partite[$i]; 
-        echo $element; ?>
+        ?>
         
         <p>
             <?php echo $element['home']; ?>
              - 
             <?php echo $element['away']; ?>
-        </p>
-        <p>
-            <?php echo $element['home-point']; ?>
+             | 
+             <?php echo $element['home-point']; ?>
              - 
             <?php echo $element['away-point']; ?>
         </p>
