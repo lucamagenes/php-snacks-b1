@@ -8,10 +8,14 @@
     var_dump(strpos($email, '@'), strpos($email, '.'));
 
     $age = $_GET['age'];
-    var_dump(is_int($age));
+    var_dump(is_numeric($age));
 
-    if(strlen($name) > 3 && strpos($email, '@') && strpos($email, '.') && is_int($age)) {
-        $risultato = 'accesso riuscito';
+    if(strlen($name) > 3 && is_numeric($age)) {
+        if(strpos($email, '@') && strpos($email, '.')) {
+            $risultato = 'accesso riuscito';
+        } else {
+            $risultato = 'accesso negato';
+        }
     } else {
         $risultato = 'accesso negato';
     }
@@ -36,6 +40,7 @@
         <input type="email" name="email" id="email">
         <label for="age">scrivi età</label>
         <input type="number" name="age" id="age">
+        <input type="submit" value="get">
     </form>
 
     <h2> <?php echo $risultato ?> </h2>
