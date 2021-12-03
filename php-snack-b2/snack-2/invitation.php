@@ -28,6 +28,14 @@ var_dump($name);
                 <?php echo $name; ?> OK
             </h1>
         <?php } ?>
+
+    <?php if(!in_array($name, $guest_list)) { ?>
+            <h1>
+                <?php echo $name; ?> KO
+            </h1>
+        <?php } ?>
+
+        
     
 </body>
 </html>
