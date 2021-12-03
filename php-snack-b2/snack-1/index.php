@@ -76,11 +76,10 @@ foreach($ads as $ad) {
             <?php foreach($ads as $ad) { 
                 $image =  $ad['image_path'];
                 $imageData = base64_encode(file_get_contents($image)); ?>
-                <div class=" <?php echo $ad['is_active'] == 'true' ? 'block' : 'none' ?>  ">
+                <a href=" <?php echo $ad['link'] ?> " class=" <?php echo $ad['is_active'] == 'true' ? 'block' : 'none' ?>  ">
                     <?php echo '<img src="data:image/jpeg;base64,'.$imageData.'">'; ?>
-                </div>
+                </a>
             <?php } ?>
         </div>
-    
 </body>
 </html>
